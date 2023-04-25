@@ -1,11 +1,19 @@
-let x = prompt("Введите число x", 14);
-let n = prompt("Введите степень, в которую хотите возвести число x", 2);
+let x = prompt("Введите число x");
+let n = prompt("Введите степень n, в которую хотите возвести число x");
 
 console.log("Пользователь сказал, что x=" + x);
 console.log("Пользователь хочет возвести x в " + n + " степень");
 
  function pow(x, n) {
-    return Math.pow(x, n);
+    return x ** n;
 }
 
-alert(pow(x, n));
+if (n % 1 == 0) {
+    alert(pow(x, n));
+} else {
+    alert(`${n} не является натуральным числом`);
+}
+
+
+
+
